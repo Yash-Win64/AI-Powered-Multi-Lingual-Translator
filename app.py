@@ -1,7 +1,14 @@
 import gradio as gr
 
-def greet(name):
-    return "Hello " + name + "!!"
+def translate(text, language):
+    # Dummy translation logic — replace with your own
+    return f"Translated '{text}' to {language}"
 
-demo = gr.Interface(fn=greet, inputs="text", outputs="text")
-demo.launch()
+iface = gr.Interface(
+    fn=translate,
+    inputs=["text", "text"],
+    outputs="text",
+    title="Multilingual Translator"
+)
+
+iface.launch()
